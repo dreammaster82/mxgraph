@@ -431,7 +431,7 @@ let mxResourceExtension = typeof(global.mxResourceExtension) != 'undefined' ? gl
  * <script type="text/javascript" src="/path/to/core/directory/js/mxClient.js"></script>
  * (end)
  */
-let mxLoadStylesheets = typeof() != 'undefined' ? global.mxLoadStylesheets: true;
+let mxLoadStylesheets = typeof(global.mxLoadStylesheets) != 'undefined' ? global.mxLoadStylesheets: true;
 
 /**
  * Variable: basePath
