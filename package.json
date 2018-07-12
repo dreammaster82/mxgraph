@@ -15,5 +15,5 @@
   "bugs": {
     "url": "https://github.com/jgraph/mxgraph/issues"
   },
-  "main": "./javascript/mxClient.js",
+  "main": "./javascript/mxClient.js"
 }
