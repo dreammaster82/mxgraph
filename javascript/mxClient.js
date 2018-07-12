@@ -383,10 +383,8 @@ var mxClient =
  * <script type="text/javascript" src="/path/to/core/directory/js/mxClient.js"></script>
  * (end)
  */
-if (typeof(mxLoadResources) == 'undefined')
-{
-	mxLoadResources = true;
-}
+let global = self || window;
+let mxLoadResources = typeof(global.mxLoadResources) != 'undefined' ? global.mxLoadResources: true;
 
 /**
  * Variable: mxForceIncludes
@@ -402,10 +400,7 @@ if (typeof(mxLoadResources) == 'undefined')
  * <script type="text/javascript" src="/path/to/core/directory/js/mxClient.js"></script>
  * (end)
  */
-if (typeof(mxForceIncludes) == 'undefined')
-{
-	mxForceIncludes = false;
-}
+let mxForceIncludes = typeof(global.mxForceIncludes) != 'undefined' ? global.mxForceIncludes: false;
 
 /**
  * Variable: mxResourceExtension
@@ -420,10 +415,7 @@ if (typeof(mxForceIncludes) == 'undefined')
  * <script type="text/javascript" src="/path/to/core/directory/js/mxClient.js"></script>
  * (end)
  */
-if (typeof(mxResourceExtension) == 'undefined')
-{
-	mxResourceExtension = '.txt';
-}
+let mxResourceExtension = typeof(global.mxResourceExtension) != 'undefined' ? global.mxResourceExtension: '.txt';
 
 /**
  * Variable: mxLoadStylesheets
@@ -439,10 +431,7 @@ if (typeof(mxResourceExtension) == 'undefined')
  * <script type="text/javascript" src="/path/to/core/directory/js/mxClient.js"></script>
  * (end)
  */
-if (typeof(mxLoadStylesheets) == 'undefined')
-{
-	mxLoadStylesheets = true;
-}
+let mxLoadStylesheets = typeof() != 'undefined' ? global.mxLoadStylesheets: true;
 
 /**
  * Variable: basePath
@@ -89181,3 +89170,9 @@ mxCodecRegistry.register(function()
 	return codec;
 
 }());
+
+export {mxConstants, mxGraph, mxText, mxGraphModel, mxGraphView, mxClient as default, mxSvgCanvas2D, mxEvent, mxPoint};
+export {mxUtils, mxEdgeStyle, mxRectangle, mxEdgeHandler, mxCellRenderer, mxVertexHandler, mxDragSource, mxPopupMenu, mxGuide};
+export {mxGraphHandler, mxConnectionHandler, mxRubberband, mxLayoutManager, mxStackLayout, mxCompactTreeLayout, mxHierarchicalLayout};
+export {mxEventObject, mxResources, mxImage, mxStencil, mxStencilRegistry, mxShape, mxCodec, mxConstraintHandler, mxCellEditor, mxOutline, mxCellHighlight };
+export {mxPanningHandler, mxPopupMenuHandler };
